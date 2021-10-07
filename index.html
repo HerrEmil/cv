@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -50,7 +51,7 @@
       dl {
         font-style: initial;
         margin: 10px 0 24px 0;
-        max-width: 223px;
+        max-width: 265px;
         display: flex;
         flex-wrap: wrap;
       }
@@ -63,7 +64,7 @@
       }
 
       h1 {
-        font-family: 'CaeciliaLTStd-Heavy', Geneva, Verdana, sans-serif;
+        font-family: "CaeciliaLTStd-Heavy", Geneva, Verdana, sans-serif;
         text-transform: uppercase;
       }
 
@@ -71,7 +72,7 @@
       p,
       li,
       h2 span {
-        font-family: 'AvenirLTStd-Light', Arial, sans-serif;
+        font-family: "AvenirLTStd-Light", Arial, sans-serif;
       }
 
       main > section {
@@ -90,7 +91,7 @@
       }
 
       h2 {
-        font-family: 'CaeciliaLTStd-BoldItalic', Geneva, Verdana, sans-serif;
+        font-family: "CaeciliaLTStd-BoldItalic", Geneva, Verdana, sans-serif;
         margin: 0;
       }
       section section:not(:first-of-type) {
@@ -98,7 +99,7 @@
       }
 
       dt {
-        font-family: 'CaeciliaLTStd-Bold', Geneva, Verdana, sans-serif;
+        font-family: "CaeciliaLTStd-Bold", Geneva, Verdana, sans-serif;
         text-transform: uppercase;
       }
       header {
@@ -111,7 +112,7 @@
       header h1 {
         flex-basis: 100%;
         font-size: 32pt;
-        font-family: 'CaeciliaLTStd-Heavy', Geneva, Verdana, sans-serif;
+        font-family: "CaeciliaLTStd-Heavy", Geneva, Verdana, sans-serif;
       }
       .headshot-container {
         flex-basis: 50%;
@@ -172,7 +173,7 @@
       <header>
         <h1>Emil Andréas Andersson</h1>
         <div class="headshot-container">
-          <img src="headshot.jpg" />
+          <img src="emil.jpg" alt="Photo of Emil Andersson" />
         </div>
       </header>
       <main>
@@ -182,14 +183,14 @@
             <dl>
               <dt>Address:</dt>
               <dd>
-                Nobelvägen 72B
+                Bangatan 10
                 <br />
-                21215 Malmö
+                214 26 Malmö
                 <br />
                 Sweden
               </dd>
               <dt>Telephone:</dt>
-              <dd>+45 3131 0876</dd>
+              <dd>+46 (0) 73 85 04 199</dd>
               <dt>Email:</dt>
               <dd>hello@herremil.com</dd>
             </dl>
@@ -199,9 +200,10 @@
         <section>
           <h1>Introduction</h1>
           <p>
-            I am a friendly guy that develops web apps and games. I have worked in product
-            development as tester, PM, manager and programmer. I have experience working on my own,
-            as part of a team and as a team leader.
+            I am a friendly guy that develops web apps and games. I have worked
+            in product development as tester, PM, manager and programmer. I have
+            experience working on my own, as part of a team and as a team
+            leader.
           </p>
         </section>
 
@@ -210,14 +212,50 @@
 
           <section>
             <h2>
-              Developer, Apsis
-              <span>Feb 2017 - Present</span>
+              Frontend Architect, GetAccept
+              <span>Apr 2021 - present</span>
+            </h2>
+          </section>
+
+          <section>
+            <h2>
+              Software Engineer, Neo4j
+              <span>Jan 2020 - Mar 2021</span>
             </h2>
             <p>
-              I am a product developer that joined Apsis to build an email editor. Initially a
-              full-stack angular/node developer, after the project grew, developers specialized and
-              I am focused on frontend. I make the product, code, builds and teams fast, mostly
-              through simplicity, immutability and a lot of static analysis and test coverage.
+              At Neo4j, I was part of the Developer Tools team, and worked on
+              the Neo4j Browser. Noteworthy contributions to the browser were:
+            </p>
+            <ul>
+              <li>
+                <a href="https://github.com/neo4j/neo4j-browser/pull/1213"
+                  >Implement Monaco as the new Cypher query editor</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/neo4j/neo4j-browser/pull/1237"
+                  >Convert to typescript</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/neo4j/neo4j-browser/pull/1274"
+                  >Improve performance when receiving large query results</a
+                >
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>
+              Developer, Apsis
+              <span>Feb 2017 - Jan 2020</span>
+            </h2>
+            <p>
+              I joined Apsis to build an email editor. Initially a full-stack
+              angular/node developer, after the project grew, developers
+              specialized and I focused on frontend. I made the product, code,
+              builds and teams fast, mostly through simplicity, immutability and
+              a lot of static analysis and test coverage.
             </p>
           </section>
 
@@ -227,14 +265,17 @@
               <span>Aug 2016 - Nov 2016</span>
             </h2>
             <ul>
-              <li>Developing Selenium E2E test suites in C#, Java and some JavaScript</li>
+              <li>
+                Developing Selenium E2E test suites in C#, Java and some
+                JavaScript
+              </li>
               <li>Teaching testers how to do test automation</li>
             </ul>
           </section>
 
           <section>
             <h2>
-              QA Enginer, Falcon.io
+              QA Engineer, Falcon.io
               <span>Feb 2015 - July 2016</span>
             </h2>
             <ul>
@@ -251,9 +292,10 @@
               <span>Jun 2011 - Oct 2015</span>
             </h2>
             <p>
-              Developing and publishing computer games at game jams or as side projects with friends
-              or on my own. Games are mostly written in vanilla JavaScript, but I also tried some
-              projects using various js frameworks and libraries and other languages and tools like
+              Developing and publishing computer games at game jams or as side
+              projects with friends or on my own. Games are mostly written in
+              vanilla JavaScript, but I also tried some projects using various
+              js frameworks and libraries and other languages and tools like
               Lua, C#, Unity, Defold.
             </p>
           </section>
@@ -267,10 +309,12 @@
               <li>Recruit, train, manage and support testers</li>
               <li>Track quality of all content deliveries</li>
               <li>
-                Continuously update QA procedures to follow client demands and company strategy
+                Continuously update QA procedures to follow client demands and
+                company strategy
               </li>
               <li>
-                Create checklists, templates and structures for design, development and analytics
+                Create checklists, templates and structures for design,
+                development and analytics
               </li>
             </ul>
           </section>
@@ -281,7 +325,9 @@
               <span>Jul 2011 - Jun 2012</span>
             </h2>
             <ul>
-              <li>Setting up QA process for content delivery in design agency</li>
+              <li>
+                Setting up QA process for content delivery in design agency
+              </li>
               <li>Testing</li>
               <li>Recruiting and training testers</li>
               <li>Creating and choosing development and test tools</li>
@@ -294,7 +340,8 @@
               <span>Jul 2010 - Dec 2010</span>
             </h2>
             <p>
-              Functionality testing of the video game Killzone 3 along with its DLC and demo.
+              Functionality testing of the video game Killzone 3 along with its
+              DLC and demo.
             </p>
           </section>
 
@@ -309,8 +356,8 @@
               <li>Tracking expenses and approving/sending invoices</li>
             </ul>
             <p>
-              I handled over 100 projects for clients like Sony, Ubisoft, Zylom, Activision, Vivendi
-              and Koch Media.
+              I handled over 100 projects for clients like Sony, Ubisoft, Zylom,
+              Activision, Vivendi and Koch Media.
             </p>
           </section>
 
@@ -327,19 +374,20 @@
               <li>Proofreading manuals, ads, websites</li>
             </ul>
             <p>
-              After 9 months of working from home, I accepted an offer to relocate to The
-              Netherlands.
+              After 9 months of working from home, I accepted an offer to
+              relocate to The Netherlands.
             </p>
           </section>
 
           <section>
             <h2>
-              Postman, Posten
+              Postman, PostNord
               <span>Jan 2003 - Oct 2004</span>
             </h2>
             <p>
-              While in high school, I worked evenings at the local post office. I worked as a
-              postman during the summer vacation after high school, before continuing my studies.
+              While in high school, I worked evenings at the local post office.
+              I worked as a postman during the summer vacation after high
+              school, before continuing my studies.
             </p>
           </section>
         </section>
@@ -352,7 +400,10 @@
               Spelutveckling, Malmö University
               <span>Sep 2006 - Jan 2007</span>
             </h2>
-            <p>Game Development college course focused on game design and prototyping.</p>
+            <p>
+              Game Development college course focused on game design and
+              prototyping.
+            </p>
           </section>
 
           <section>
@@ -361,9 +412,10 @@
               <span>Oct 2004 - Jun 2006</span>
             </h2>
             <p>
-              Game Development education, consisting mainly of C++ courses, but also including
-              courses in game design, program design, linear algebra, data structures and
-              algorithms. Also including two internships at local game developers.
+              Game Development education, consisting mainly of C++ courses, but
+              also including courses in game design, program design, linear
+              algebra, data structures and algorithms. Also including two
+              internships at local game developers.
             </p>
           </section>
 
