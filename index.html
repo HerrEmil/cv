@@ -24,13 +24,16 @@
       body {
         color: #222;
         margin: 0;
-        color-adjust: exact !important;
+        print-color-adjust: exact !important;
       }
       .a4 {
         background-color: white;
         box-sizing: border-box;
         padding: 2em;
-        overflow-x: hidden;
+        overflow: hidden;
+        break-inside: avoid;
+        break-after: page;
+        height: 1123px;
       }
 
       p,
@@ -75,18 +78,18 @@
         font-family: "AvenirLTStd-Light", Arial, sans-serif;
       }
 
-      main > section {
+      .main > section {
         margin-top: 3em;
       }
 
-      main section > h1 {
+      .main section > h1 {
         background-color: #fff200 !important;
         padding-left: 75px;
         margin-left: -75px;
         display: inline;
       }
 
-      main section > h1 + * {
+      .main section > h1 + * {
         margin-top: 1em;
       }
 
@@ -123,20 +126,14 @@
         height: 47.5mm;
         width: 35mm;
       }
-      section section,
-      p,
-      ul {
-        page-break-inside: avoid;
-      }
-      h1,
-      h2,
-      li {
-        page-break-before: avoid;
-        page-break-after: avoid;
-      }
       @page {
         size: auto;
         margin: 0;
+      }
+      @media print {
+        .a4 {
+          height: auto;
+        }
       }
       @media screen and (min-width: 793px) {
         .a4 {
@@ -176,16 +173,16 @@
           <img src="emil.jpg" alt="Photo of Emil Andersson" />
         </div>
       </header>
-      <main>
+      <div class="main">
         <section>
           <h1>Personal Details</h1>
           <address>
             <dl>
               <dt>Address:</dt>
               <dd>
-                Bangatan 10
+                Dammfrivägen 48B
                 <br />
-                214 26 Malmö
+                217 63 Malmö
                 <br />
                 Sweden
               </dd>
@@ -258,7 +255,13 @@
               a lot of static analysis and test coverage.
             </p>
           </section>
+        </section>
+      </div>
+    </div>
 
+    <div class="a4">
+      <div class="main">
+        <section>
           <section>
             <h2>
               Senior Test Automation Engineer, Falcon.io
@@ -360,7 +363,13 @@
               Activision, Vivendi and Koch Media.
             </p>
           </section>
+        </section>
+      </div>
+    </div>
 
+    <div class="a4">
+      <div class="main">
+        <section>
           <section>
             <h2>
               Games Linguistic Tester, U-TRAX
@@ -427,7 +436,7 @@
             <p>University preparatory high school, creative arts programme.</p>
           </section>
         </section>
-      </main>
+      </div>
     </div>
   </body>
 </html>
