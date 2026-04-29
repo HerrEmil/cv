@@ -1,0 +1,16 @@
+name: perf
+
+on:
+  pull_request:
+    branches: [main]
+    paths-ignore:
+      - "**/*.md"
+
+jobs:
+  perf:
+    uses: HerrEmil/perf-config/.github/workflows/perf.yml@v1
+    with:
+      site_dir: .
+      tier: static
+      package_manager: none
+      perf_config_ref: v1
