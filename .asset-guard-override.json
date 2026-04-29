@@ -1,0 +1,8 @@
+{
+  "exempt": [
+    { "path": "AvenirLTStd-Light.otf", "sunset": "2026-09-30", "reason": "task 26 deferred (Avenir license)" },
+    { "path": "CaeciliaLTStd-Bold.otf", "sunset": "2026-09-30", "reason": "task 26 deferred" },
+    { "path": "CaeciliaLTStd-BoldItalic.otf", "sunset": "2026-09-30", "reason": "task 26 deferred" },
+    { "path": "CaeciliaLTStd-Heavy.otf", "sunset": "2026-09-30", "reason": "task 26 deferred" }
+  ]
+}
