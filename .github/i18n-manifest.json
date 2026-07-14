@@ -1,0 +1,12 @@
+{
+  "_convention": "source_sha is the short git blob hash (git hash-object <source> | cut -c1-12) of the English source file at the time each translation was last brought in sync. A language is in sync while that hash still matches the current source blob; on mismatch the translation is stale and must be resynced. This file lives under .github/ and is excluded from the S3 deploy.",
+  "site": "herremil.com/cv",
+  "source": "index.html",
+  "languages": {
+    "sv": {
+      "endonym": "Svenska",
+      "source_sha": "e0559c16baff",
+      "files": ["sv/index.html"]
+    }
+  }
+}
