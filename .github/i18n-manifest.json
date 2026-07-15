@@ -5,8 +5,13 @@
   "languages": {
     "sv": {
       "endonym": "Svenska",
-      "source_sha": "e0559c16baff",
+      "source_sha": "50200d013a3d",
       "files": ["sv/index.html"]
+    },
+    "de": {
+      "endonym": "Deutsch",
+      "source_sha": "50200d013a3d",
+      "files": ["de/index.html"]
     }
   }
 }

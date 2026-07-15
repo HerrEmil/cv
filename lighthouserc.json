@@ -3,7 +3,7 @@
     "collect": {
       "staticDistDir": ".",
       "numberOfRuns": 3,
-      "url": ["http://localhost/index.html", "http://localhost/sv/index.html"]
+      "url": ["http://localhost/index.html", "http://localhost/sv/index.html", "http://localhost/de/index.html"]
     },
     "assert": {
       "preset": "lighthouse:no-pwa",

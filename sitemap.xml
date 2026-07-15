@@ -5,12 +5,21 @@
     <loc>https://herremil.com/cv/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://herremil.com/cv/"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://herremil.com/cv/sv/index.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://herremil.com/cv/de/index.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://herremil.com/cv/"/>
   </url>
   <url>
     <loc>https://herremil.com/cv/sv/index.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://herremil.com/cv/"/>
     <xhtml:link rel="alternate" hreflang="sv" href="https://herremil.com/cv/sv/index.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://herremil.com/cv/de/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://herremil.com/cv/"/>
+  </url>
+  <url>
+    <loc>https://herremil.com/cv/de/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://herremil.com/cv/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://herremil.com/cv/sv/index.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://herremil.com/cv/de/index.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://herremil.com/cv/"/>
   </url>
 </urlset>
