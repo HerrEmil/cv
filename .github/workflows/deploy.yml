@@ -11,6 +11,11 @@ jobs:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       AWS_DEFAULT_REGION: eu-north-1
+      S3_DEST: s3://${{ secrets.S3_BUCKET }}/
+      # Content-hashed assets, matched on the `name.<8 hex>.ext` convention rather
+      # than on a literal filename. One string drives both the immutable pass's
+      # --include and the 1-day pass's --exclude, so the two halves cannot drift.
+      IMMUTABLE_GLOB: "*.[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f].*"
 
     steps:
       - uses: actions/checkout@v4
@@ -22,44 +27,44 @@ jobs:
       # - run: npm ci && npm run build
 
       # Three passes so each asset class gets the right Cache-Control. Each keeps
-      # --delete, but scoped to a disjoint set of keys (headshots / non-HTML /
-      # HTML) so every file is reconciled by exactly one pass and there are no
+      # --delete, but scoped to a disjoint set of keys (hashed / non-HTML / HTML)
+      # so every file is reconciled by exactly one pass and there are no
       # cross-pass delete races.
 
-      # Content-hashed headshots (avif/webp/jpg, {8}-hex in the filename): the
-      # name changes whenever the image changes, so cache them forever; --delete
-      # purges the previous hash. Fonts are NOT hashed → they ride the next pass.
+      # Content-hashed assets (today: the headshots): the name changes whenever
+      # the bytes change, so cache them forever; --delete purges the previous
+      # hash. Anything matching IMMUTABLE_GLOB joins this pass on its own, so
+      # content-hashing the fonts (cwv-lab-log backlog #1) needs no edit here.
       - name: Sync immutable hashed assets to S3
         run: |
-          aws s3 sync . s3://${{ secrets.S3_BUCKET }}/ \
+          aws s3 sync . "$S3_DEST" \
             --delete \
             --exclude "*" \
-            --include "headshot-540.*" \
+            --include "$IMMUTABLE_GLOB" \
             --cache-control "public,max-age=31536000,immutable"
 
       # Everything else (unhashed fonts, og-card, sitemap, misc): stable names,
       # moderate 1-day TTL; the CloudFront /* invalidation flushes the edge each
-      # deploy. Content-hashing the fonts would let them go immutable too
-      # (cwv-lab-log backlog #1).
+      # deploy.
       - name: Sync assets to S3 (1-day cache)
         run: |
-          aws s3 sync . s3://${{ secrets.S3_BUCKET }}/ \
+          aws s3 sync . "$S3_DEST" \
             --delete \
             --exclude ".git/*" \
             --exclude ".github/*" \
             --exclude "*.html" \
-            --exclude "headshot-540.*" \
+            --exclude "$IMMUTABLE_GLOB" \
             --cache-control "public,max-age=86400"
 
       # HTML last: always revalidate so a fresh deploy is picked up immediately.
+      # No .git/.github excludes here — `--exclude "*"` already dropped them and
+      # neither directory holds any .html.
       - name: Sync HTML to S3 (must-revalidate)
         run: |
-          aws s3 sync . s3://${{ secrets.S3_BUCKET }}/ \
+          aws s3 sync . "$S3_DEST" \
             --delete \
             --exclude "*" \
             --include "*.html" \
-            --exclude ".git/*" \
-            --exclude ".github/*" \
             --cache-control "public,max-age=0,must-revalidate"
 
       - name: Invalidate CloudFront cache
