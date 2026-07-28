@@ -12,10 +12,12 @@ jobs:
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       AWS_DEFAULT_REGION: eu-north-1
       S3_DEST: s3://${{ secrets.S3_BUCKET }}/
-      # Content-hashed assets, matched on the `name.<8 hex>.ext` convention rather
-      # than on a literal filename. One string drives both the immutable pass's
-      # --include and the 1-day pass's --exclude, so the two halves cannot drift.
-      IMMUTABLE_GLOB: "*.[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f].*"
+      # Content-hashed assets, matched on the `name.<8+ hex>.ext` convention owned
+      # by perf-config (asset-guard accepts 8+ hex, hash-assets.mjs emits 10 — the
+      # trailing * after eight hex chars covers both, e.g. hashed fonts, backlog
+      # #1). One string drives both the immutable pass's --include and the 1-day
+      # pass's --exclude, so the two halves cannot drift.
+      IMMUTABLE_GLOB: "*.[0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f]*.*"
 
     steps:
       - uses: actions/checkout@v4
@@ -33,8 +35,7 @@ jobs:
 
       # Content-hashed assets (today: the headshots): the name changes whenever
       # the bytes change, so cache them forever; --delete purges the previous
-      # hash. Anything matching IMMUTABLE_GLOB joins this pass on its own, so
-      # content-hashing the fonts (cwv-lab-log backlog #1) needs no edit here.
+      # hash.
       - name: Sync immutable hashed assets to S3
         run: |
           aws s3 sync . "$S3_DEST" \
@@ -57,14 +58,14 @@ jobs:
             --cache-control "public,max-age=86400"
 
       # HTML last: always revalidate so a fresh deploy is picked up immediately.
-      # No .git/.github excludes here — `--exclude "*"` already dropped them and
-      # neither directory holds any .html.
       - name: Sync HTML to S3 (must-revalidate)
         run: |
           aws s3 sync . "$S3_DEST" \
             --delete \
             --exclude "*" \
             --include "*.html" \
+            --exclude ".git/*" \
+            --exclude ".github/*" \
             --cache-control "public,max-age=0,must-revalidate"
 
       - name: Invalidate CloudFront cache
