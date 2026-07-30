@@ -79,7 +79,6 @@
         overflow: hidden;
         break-inside: avoid;
         break-after: page;
-        height: 1123px;
       }
 
       p,
@@ -182,6 +181,9 @@
       }
       @media screen and (min-width: 793px) {
         .a4 {
+          /* Fixed A4 height only where the page-sheet look applies; on narrow
+             screens text wraps taller and a fixed height would clip content. */
+          height: 1123px;
           margin: 20px auto;
           padding: 75px;
           max-width: 793px;
