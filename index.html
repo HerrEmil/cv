@@ -10,11 +10,6 @@
     <meta name="description" content="CV of Emil Andersson — frontend architect, web and game developer.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://herremil.com/cv/">
-    <link rel="alternate" hreflang="en" href="https://herremil.com/cv/">
-    <link rel="alternate" hreflang="sv" href="https://herremil.com/cv/sv/index.html">
-    <link rel="alternate" hreflang="de" href="https://herremil.com/cv/de/index.html">
-    <link rel="alternate" hreflang="fr" href="https://herremil.com/cv/fr/index.html">
-    <link rel="alternate" hreflang="x-default" href="https://herremil.com/cv/">
     <!-- Preload priority is tuned to the LCP element (the intro paragraph, body text in
          Nunito Sans): the body font is fetchpriority=high so it wins bandwidth under
          throttling; Bitter-italic (below-the-fold job titles only) is demoted to low but
@@ -33,9 +28,6 @@
     <meta property="og:description" content="CV of Emil Andersson — frontend architect, web and game developer.">
     <meta property="og:url" content="https://herremil.com/cv/">
     <meta property="og:locale" content="en_US">
-    <meta property="og:locale:alternate" content="sv_SE">
-    <meta property="og:locale:alternate" content="de_DE">
-    <meta property="og:locale:alternate" content="fr_FR">
     <meta property="og:image" content="https://herremil.com/cv/img/og-card.jpg">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
@@ -217,55 +209,10 @@
         font-family: "Nunito Sans", Arial, sans-serif;
         font-weight: normal;
       }
-      /* Language switcher: screen-only chrome, hidden from the printed/PDF CV.
-         In normal flow above the A4 so it is painted on first frame (no CLS). */
-      .lang-nav {
-        margin: 0;
-        padding: 12px 16px;
-        text-align: center;
-        font-family: "Nunito Sans", Arial, sans-serif;
-        font-size: 14px;
-      }
-      .lang-nav ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-      .lang-nav li {
-        display: inline-block;
-        margin: 0 8px;
-      }
-      .lang-nav a {
-        display: inline-block;
-        padding: 6px 4px;
-        color: #222;
-        text-decoration: none;
-      }
-      .lang-nav a:hover,
-      .lang-nav a:focus {
-        text-decoration: underline;
-      }
-      .lang-nav [aria-current] {
-        font-weight: 700;
-        text-decoration: underline;
-      }
-      @media print {
-        .lang-nav {
-          display: none;
-        }
-      }
     </style>
   </head>
 
   <body>
-    <nav aria-label="Language" class="lang-nav">
-      <ul>
-        <li><a href="index.html" hreflang="en" aria-current="true">English</a></li>
-        <li><a href="sv/index.html" hreflang="sv">Svenska</a></li>
-        <li><a href="de/index.html" hreflang="de">Deutsch</a></li>
-        <li><a href="fr/index.html" hreflang="fr">Français</a></li>
-      </ul>
-    </nav>
     <main>
     <div class="a4">
       <header>
