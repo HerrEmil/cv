@@ -179,6 +179,19 @@
           height: auto;
         }
       }
+      /* On narrow screens the sheets flow as one continuous document, so
+         collapse the seams between them to the normal entry spacing. */
+      @media screen and (max-width: 792px) {
+        .a4:not(:last-child) {
+          padding-bottom: 0;
+        }
+        .a4 + .a4 {
+          padding-top: 0;
+        }
+        .a4 + .a4 .main > section:first-child {
+          margin-top: 1.5em;
+        }
+      }
       @media screen and (min-width: 793px) {
         .a4 {
           /* Fixed A4 height only where the page-sheet look applies; on narrow

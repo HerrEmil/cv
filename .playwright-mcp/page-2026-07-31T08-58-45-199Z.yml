@@ -1,0 +1,102 @@
+- main [ref=f1e2]:
+  - generic [ref=f1e3]:
+    - generic [ref=f1e4]:
+      - heading "Emil Andréas Andersson" [level=1] [ref=f1e5]
+      - img "Photo of Emil Andersson" [ref=f1e8]
+    - generic [ref=f1e9]:
+      - generic [ref=f1e10]:
+        - heading "Personal Details" [level=1] [ref=f1e11]
+        - generic [ref=f1e13]:
+          - term [ref=f1e14]: "Address:"
+          - definition [ref=f1e15]: Dammfrivägen 48B 217 63 Malmö Sweden
+          - term [ref=f1e16]: "Telephone:"
+          - definition [ref=f1e17]: +46 (0) 73 85 04 199
+          - term [ref=f1e18]: "Email:"
+          - definition [ref=f1e19]: hello@herremil.com
+      - generic [ref=f1e20]:
+        - heading "Introduction" [level=1] [ref=f1e21]
+        - paragraph [ref=f1e22]: I am a friendly guy that develops web apps and games. I have worked in product development as tester, PM, manager and programmer. I have experience working on my own, as part of a team and as a team leader.
+      - generic [ref=f1e23]:
+        - heading "Career History" [level=1] [ref=f1e24]
+        - heading "Engineering Manager - AI Operations, GetAccept Apr 2026 - present" [level=2] [ref=f1e26]
+        - heading "Interim Engineering Manager, GetAccept Dec 2024 - Apr 2026" [level=2] [ref=f1e28]
+        - heading "Frontend Architect, GetAccept Apr 2021 - Nov 2024" [level=2] [ref=f1e30]
+        - generic [ref=f1e31]:
+          - heading "Software Engineer, Neo4j Jan 2020 - Mar 2021" [level=2] [ref=f1e32]
+          - paragraph [ref=f1e33]: "At Neo4j, I was part of the Developer Tools team, and worked on the Neo4j Browser. Noteworthy contributions to the browser were:"
+          - list [ref=f1e34]:
+            - listitem [ref=f1e35]:
+              - link "Implement Monaco as the new Cypher query editor" [ref=f1e36] [cursor=pointer]:
+                - /url: https://github.com/neo4j/neo4j-browser/pull/1213
+            - listitem [ref=f1e37]:
+              - link "Convert to typescript" [ref=f1e38] [cursor=pointer]:
+                - /url: https://github.com/neo4j/neo4j-browser/pull/1237
+            - listitem [ref=f1e39]:
+              - link "Improve performance when receiving large query results" [ref=f1e40] [cursor=pointer]:
+                - /url: https://github.com/neo4j/neo4j-browser/pull/1274
+  - generic [ref=f1e43]:
+    - generic [ref=f1e44]:
+      - heading "Developer, Apsis Feb 2017 - Jan 2020" [level=2] [ref=f1e45]
+      - paragraph [ref=f1e46]: I joined Apsis to build an email editor. Initially a full-stack angular/node developer, after the project grew, developers specialized and I focused on frontend. I made the product, code, builds and teams fast, mostly through simplicity, immutability and a lot of static analysis and test coverage.
+    - generic [ref=f1e47]:
+      - heading "Senior Test Automation Engineer, Falcon.io Aug 2016 - Nov 2016" [level=2] [ref=f1e48]
+      - list [ref=f1e49]:
+        - listitem [ref=f1e50]: Developing Selenium E2E test suites in C#, Java and some JavaScript
+        - listitem [ref=f1e51]: Teaching testers how to do test automation
+    - generic [ref=f1e52]:
+      - heading "QA Engineer, Falcon.io Feb 2015 - July 2016" [level=2] [ref=f1e53]
+      - list [ref=f1e54]:
+        - listitem [ref=f1e55]: Testing
+        - listitem [ref=f1e56]: Triaging bug reports
+        - listitem [ref=f1e57]: Setting up internal QA process
+        - listitem [ref=f1e58]: Recruiting testers
+    - generic [ref=f1e59]:
+      - heading "Owner, Herr Emil Jun 2011 - Oct 2015" [level=2] [ref=f1e60]
+      - paragraph [ref=f1e61]: Developing and publishing computer games at game jams or as side projects with friends or on my own. Games are mostly written in vanilla JavaScript, but I also tried some projects using various js frameworks and libraries and other languages and tools like Lua, C#, Unity, Defold.
+    - generic [ref=f1e62]:
+      - heading "QA Manager, Anthill Agency Jul 2012 - Jan 2015" [level=2] [ref=f1e63]
+      - list [ref=f1e64]:
+        - listitem [ref=f1e65]: Recruit, train, manage and support testers
+        - listitem [ref=f1e66]: Track quality of all content deliveries
+        - listitem [ref=f1e67]: Continuously update QA procedures to follow client demands and company strategy
+        - listitem [ref=f1e68]: Create checklists, templates and structures for design, development and analytics
+    - generic [ref=f1e69]:
+      - heading "QA Architect, Anthill Agency Jul 2011 - Jun 2012" [level=2] [ref=f1e70]
+      - list [ref=f1e71]:
+        - listitem [ref=f1e72]: Setting up QA process for content delivery in design agency
+        - listitem [ref=f1e73]: Testing
+        - listitem [ref=f1e74]: Recruiting and training testers
+        - listitem [ref=f1e75]: Creating and choosing development and test tools
+    - generic [ref=f1e76]:
+      - heading "QA tester, Guerrilla Games Jul 2010 - Dec 2010" [level=2] [ref=f1e77]
+      - paragraph [ref=f1e78]: Functionality testing of the video game Killzone 3 along with its DLC and demo.
+  - generic [ref=f1e80]:
+    - generic [ref=f1e81]:
+      - generic [ref=f1e82]:
+        - heading "Supervisor, U-TRAX Oct 2007 - Jun 2010" [level=2] [ref=f1e83]
+        - list [ref=f1e84]:
+          - listitem [ref=f1e85]: Project management of localization test projects
+          - listitem [ref=f1e86]: Recruiting, training and supporting testers
+          - listitem [ref=f1e87]: Tracking expenses and approving/sending invoices
+        - paragraph [ref=f1e88]: I handled over 100 projects for clients like Sony, Ubisoft, Zylom, Activision, Vivendi and Koch Media.
+      - generic [ref=f1e89]:
+        - heading "Games Linguistic Tester, U-TRAX Nov 2006 - Oct 2007" [level=2] [ref=f1e90]
+        - paragraph [ref=f1e91]: While in college, I worked evenings as a games linguistic tester.
+        - list [ref=f1e92]:
+          - listitem [ref=f1e93]: Testing PlayStation and PC games
+          - listitem [ref=f1e94]: Proofreading manuals, ads, websites
+        - paragraph [ref=f1e95]: After 9 months of working from home, I accepted an offer to relocate to The Netherlands.
+      - generic [ref=f1e96]:
+        - heading "Postman, PostNord Jan 2003 - Oct 2004" [level=2] [ref=f1e97]
+        - paragraph [ref=f1e98]: While in high school, I worked evenings at the local post office. I worked as a postman during the summer vacation after high school, before continuing my studies.
+    - generic [ref=f1e99]:
+      - heading "Education" [level=1] [ref=f1e100]
+      - generic [ref=f1e101]:
+        - heading "Spelutveckling, Malmö University Sep 2006 - Jan 2007" [level=2] [ref=f1e102]
+        - paragraph [ref=f1e103]: Game Development college course focused on game design and prototyping.
+      - generic [ref=f1e104]:
+        - heading "Systemutveckling, Knowledge Partner Oct 2004 - Jun 2006" [level=2] [ref=f1e105]
+        - paragraph [ref=f1e106]: Game Development education, consisting mainly of C++ courses, but also including courses in game design, program design, linear algebra, data structures and algorithms. Also including two internships at local game developers.
+      - generic [ref=f1e107]:
+        - heading "Estetiska programmet, Söderslättsgymnasiet Aug 2001 - June 2004" [level=2] [ref=f1e108]
+        - paragraph [ref=f1e109]: University preparatory high school, creative arts programme.
