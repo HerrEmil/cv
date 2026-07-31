@@ -66,6 +66,7 @@
         src: url(fonts/nunito-sans-300-latin.woff2) format("woff2");
       }
       body {
+        --entry-gap: 1.5em;
         color: #222;
         font-family: "Nunito Sans", Arial, sans-serif;
         font-weight: 300;
@@ -143,7 +144,7 @@
         margin: 0;
       }
       section section:not(:first-of-type) {
-        padding-top: 1.5em;
+        padding-top: var(--entry-gap);
       }
 
       dt {
@@ -174,14 +175,9 @@
         size: auto;
         margin: 0;
       }
-      @media print {
-        .a4 {
-          height: auto;
-        }
-      }
       /* On narrow screens the sheets flow as one continuous document, so
          collapse the seams between them to the normal entry spacing. */
-      @media screen and (max-width: 792px) {
+      @media screen and (width < 793px) {
         .a4:not(:last-child) {
           padding-bottom: 0;
         }
@@ -189,7 +185,7 @@
           padding-top: 0;
         }
         .a4 + .a4 .main > section:first-child {
-          margin-top: 1.5em;
+          margin-top: var(--entry-gap);
         }
       }
       @media screen and (min-width: 793px) {
