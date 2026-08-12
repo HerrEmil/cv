@@ -1,1 +1,1 @@
-https://herremil.com/cv/
+https://cv.herremil.com/

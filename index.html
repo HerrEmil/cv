@@ -9,7 +9,7 @@
     <meta name="theme-color" content="#ffffff">
     <meta name="description" content="CV of Emil Andersson — engineering manager &amp; AI specialist.">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://herremil.com/cv/">
+    <link rel="canonical" href="https://cv.herremil.com/">
     <!-- Preload priority is tuned to the LCP element (the intro paragraph, body text in
          Nunito Sans): the body font is fetchpriority=high so it wins bandwidth under
          throttling; Bitter-italic (below-the-fold job titles only) is demoted to low but
@@ -26,8 +26,12 @@
     <meta property="og:site_name" content="HerrEmil.com">
     <meta property="og:title" content="Emil Andersson — CV">
     <meta property="og:description" content="CV of Emil Andersson — engineering manager &amp; AI specialist.">
-    <meta property="og:url" content="https://herremil.com/cv/">
+    <meta property="og:url" content="https://cv.herremil.com/">
     <meta property="og:locale" content="en_US">
+    <!-- Every absolute URL here is on cv.herremil.com: herremil.com/cv/* 301s here with
+         the path stripped, so the herremil.com form is never where a crawler settles.
+         The alt text is painted into the card art, so og-card.jpg has to be regenerated
+         whenever og:image:alt changes — no grep will catch that drift. -->
     <meta property="og:image" content="https://cv.herremil.com/img/og-card.jpg">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1200">
@@ -35,9 +39,11 @@
     <meta property="og:image:alt" content="Emil Andersson — Engineering Manager &amp; AI Specialist. herremil.com/cv">
     <meta property="profile:first_name" content="Emil">
     <meta property="profile:last_name" content="Andersson">
+    <!-- twitter:card is the one twitter:* tag with no og:* equivalent to fall back
+         on, so it stays; without it X renders a small summary card. -->
     <meta name="twitter:card" content="summary_large_image">
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://herremil.com/#emil","name":"Emil Andersson","alternateName":"Emil Andréas Andersson","jobTitle":"Engineering Manager - AI Operations","worksFor":{"@type":"Organization","name":"GetAccept"},"email":"hello@herremil.com","url":"https://herremil.com/","address":{"@type":"PostalAddress","addressLocality":"Malmö","addressCountry":"SE"},"sameAs":["https://github.com/herremil","https://www.linkedin.com/in/herremil","https://herremil.itch.io"]},{"@type":"ProfilePage","@id":"https://herremil.com/cv/#profilepage","url":"https://herremil.com/cv/","name":"Emil Andersson CV","inLanguage":"en","mainEntity":{"@id":"https://herremil.com/#emil"}}]}
+    {"@context":"https://schema.org","@graph":[{"@type":"Person","@id":"https://herremil.com/#emil","name":"Emil Andersson","alternateName":"Emil Andréas Andersson","jobTitle":"Engineering Manager - AI Operations","worksFor":{"@type":"Organization","name":"GetAccept"},"email":"hello@herremil.com","url":"https://herremil.com/","address":{"@type":"PostalAddress","addressLocality":"Malmö","addressCountry":"SE"},"sameAs":["https://github.com/herremil","https://www.linkedin.com/in/herremil","https://herremil.itch.io"]},{"@type":"ProfilePage","@id":"https://cv.herremil.com/#profilepage","url":"https://cv.herremil.com/","name":"Emil Andersson CV","inLanguage":"en","mainEntity":{"@id":"https://herremil.com/#emil"}}]}
     </script>
     <style>
       @font-face {
